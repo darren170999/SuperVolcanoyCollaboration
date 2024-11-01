@@ -12,7 +12,7 @@ import {
   extendTheme
 } from '@chakra-ui/react';
 
-// Custom theme setup for a playful, elegant look
+
 const theme = extendTheme({
   fonts: {
     heading: 'Comic Sans MS, sans-serif',
@@ -26,6 +26,11 @@ const theme = extendTheme({
       400: '#d4b0ff',
       500: '#b8baff',
     },
+    //Create AY fully based on the colors you have taken from Color Picker
+    AY:{ 
+      primaryColor:'#1A1F71',
+      200:'#2B3B4B'
+    }
   },
 });
 
@@ -35,15 +40,15 @@ function App() {
       <Box bg="brand.100" minH="100vh" color="gray.800">
         {/* Header */}
         <Box as="header" py={10} textAlign="center">
-          <Heading size="2xl" color="brand.500">Anson's Portfolio</Heading>
-          {/* <Text fontSize="xl" color="brand.300">Young Developer & Artist</Text> */}
+          <Heading size="2xl" color="AY.primaryColor">Anson's Portfolio</Heading>
+          <Text fontSize="xl" color="AY.200">Young Developer & Artist</Text>
         </Box>
 
-        {/* About Section */}
+        {/* TODO: Fill up the texts that you like */}
         <Box maxW="600px" mx="auto" py={8} px={6} textAlign="center">
           <Heading as="h3" size="lg" mb={4}>About Me</Heading>
           <Text fontSize="md">
-            Hello! I'm Anson, a 10-year-old with a passion for coding and creating! blah blah...
+            Hello! I'm Anson, a 10-year-old with a passion for coding and creating! I 
           </Text>
         </Box>
 
@@ -54,26 +59,29 @@ function App() {
           </Heading>
           <SimpleGrid columns={[1, 2, 3]} spacing={6}>
             {/* Project Card Example */}
-            {/* <ProjectCard
-              title="Drawing App"
-              description="A web app that lets you draw with different colors and sizes."
-              imgSrc="https://via.placeholder.com/150"
+            <ProjectCard
+              title="Stickman Wars"
+              description="A shooter game which has cheat codes and guns of all kinds!"
+              imgSrc="https://scratch.mit.edu/projects/1076316337/"
+              srcLink=""
             />
             <ProjectCard
-              title="Calculator"
-              description="A basic calculator for solving math problems."
-              imgSrc="https://via.placeholder.com/150"
+              title="Level ! Run for your life"
+              description="A game based on Level ! of the Backrooms (Warning: jumpscare)."
+              imgSrc="https://scratch.mit.edu/projects/1050333827/"
+              srcLink=""
             />
             <ProjectCard
-              title="Adventure Game"
-              description="An interactive game where you go on adventures!"
-              imgSrc="https://via.placeholder.com/150"
-            /> */}
+              title="The Backrooms"
+              description="A 3d game that is set in the Backrooms!"
+              imgSrc="https://scratch.mit.edu/projects/1051251493/"
+              srcLink=""
+            />
           </SimpleGrid>
         </Box>
 
         {/* Footer */}
-        <Box as="footer" py={8} textAlign="center" bg="brand.200">
+        <Box as="footer" py={8} textAlign="center" bg="brand.200" position="fixed" bottom={0} width="100%">
           <VStack spacing={4}>
             <Text>Connect with me!</Text>
           </VStack>
@@ -87,9 +95,10 @@ function App() {
 }
 
 // Project Card Component
-const ProjectCard = ({ title, description, imgSrc }) => (
+const ProjectCard = ({ title, description, imgSrc, srcLink }) => (
+  <Link to={imgSrc}>
   <Box borderRadius="md" overflow="hidden" boxShadow="lg" bg="white">
-    <Image src={imgSrc} alt={title} boxSize="150px" mx="auto" mt={4} />
+    <Image src={srcLink} alt={title} boxSize="150px" mx="auto" mt={4} />
     <Box p={4} textAlign="center">
       <Heading as="h4" size="md" mb={2} color="brand.500">
         {title}
@@ -99,6 +108,7 @@ const ProjectCard = ({ title, description, imgSrc }) => (
       </Text>
     </Box>
   </Box>
+  </Link>
 );
 
 export default App;
