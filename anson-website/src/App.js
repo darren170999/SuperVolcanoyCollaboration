@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Flex,
   Image,
   Heading,
   Text,
