@@ -98,21 +98,24 @@ function App() {
   );
 }
 
-// Project Card Component
 const ProjectCard = ({ title, description, imgSrc, srcLink }) => (
-  <Link to={imgSrc}>
   <Box borderRadius="md" overflow="hidden" boxShadow="lg" bg="white">
-    <Image src={srcLink} alt={title} boxSize="150px" mx="auto" mt={4} />
+    {imgSrc && (
+      <Image src={imgSrc} alt={title} boxSize="150px" mx="auto" mt={4} />
+    )}
     <Box p={4} textAlign="center">
       <Heading as="h4" size="md" mb={2} color="AY.100">
         {title}
       </Heading>
-      <Text fontSize="sm" color="AY.100">
+      <Text fontSize="sm" color="AY.100" mb={4}>
         {description}
       </Text>
+      <Link href={srcLink} color="AY.400" isExternal>
+        View Project
+      </Link>
     </Box>
   </Box>
-  </Link>
 );
+
 
 export default App;
