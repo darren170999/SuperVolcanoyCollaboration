@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Image,
   Heading,
   Text,
   Link,
@@ -10,8 +9,10 @@ import {
   VStack,
   extendTheme
 } from '@chakra-ui/react';
-
-
+import SkyIsland from "./SkyIsland.png";
+import TheBackrooms from "./TheBackrooms.png";
+import Level from "./Level.png";
+import AnsonYu from "./AnsonYu.png";
 const theme = extendTheme({
   fonts: {
     heading: 'Comic Sans MS, sans-serif',
@@ -50,47 +51,42 @@ function App() {
 
         {/* TODO: Fill up the texts that you like */}
         <Box maxW="600px" mx="auto" py={8} px={6} textAlign="center">
+        <img src={AnsonYu} boxSize="150px" mx="auto" mt={4} /> 
           <Heading as="h3" size="lg" color='AY.600' mb={4}>About Me</Heading>
           <Text fontSize="md" color='AY.600'>
             Hello! I'm Anson, a 10-year-old with a passion for coding and creating! I 
           </Text>
         </Box>
-
-        {/* Projects Section */}
+{/* Study how Project Card is used. And do the same thing to add your profile picture above the About me section */}
         <Box maxW="800px" mx="auto" py={8} px={6}>
           <Heading as="h3" size="lg" mb={4} textAlign="center" color='AY.600'>
             My Projects
           </Heading>
           <SimpleGrid columns={[1, 2, 3]} spacing={6}>
-            {/* Project Card Example */}
             <ProjectCard
               title="Sky Island"
               description="A shooter game which has cheat codes and guns of all kinds!"
-              imgSrc="and.png"
+              imgSrc={SkyIsland}
               srcLink="https://scratch.mit.edu/projects/1076316337/"
             />
             <ProjectCard
               title="Level ! Run for your life"
               description="A game based on Level ! of the Backrooms (Warning: jumpscare)."
-              imgSrc=""
+              imgSrc={Level}
               srcLink="https://scratch.mit.edu/projects/1050333827/"
             />
             <ProjectCard
               title="The Backrooms"
               description="A 3d game that is set in the Backrooms!"
-              imgSrc=""
+              imgSrc={TheBackrooms}
               srcLink="https://scratch.mit.edu/projects/1051251493/"
             />
           </SimpleGrid>
         </Box>
 
-        {/* Footer */}
-        <Box as="footer" py={8} textAlign="center" bg="AY.400" position="fixed" bottom={0} width="100%">
-          <VStack spacing={4}>
-            <Text>Connect with me!</Text>
-          </VStack>
-          <Text fontSize="sm" mt={4}>
-            © 2024 Darren's Template Portfolio. Built with ❤️ using Chakra UI.
+        <Box as="footer" textAlign="center" bg="AY.400" position="fixed" bottom={0} width="100%">
+          <Text fontSize="sm" mt={2}>
+            © 2024 Anson's Template Portfolio. Built with ❤️ using Chakra UI.
           </Text>
         </Box>
       </Box>
@@ -101,7 +97,7 @@ function App() {
 const ProjectCard = ({ title, description, imgSrc, srcLink }) => (
   <Box borderRadius="md" overflow="hidden" boxShadow="lg" bg="white">
     {imgSrc && (
-      <Image src={imgSrc} alt={title} boxSize="150px" mx="auto" mt={4} />
+      <img src={imgSrc} alt={title} boxSize="150px" mx="auto" mt={4} /> // This line here tells u that this is an image
     )}
     <Box p={4} textAlign="center">
       <Heading as="h4" size="md" mb={2} color="AY.100">
