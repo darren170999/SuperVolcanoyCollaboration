@@ -54,7 +54,7 @@ function App() {
         <img src={AnsonYu} boxSize="150px" mx="auto" mt={4} /> 
           <Heading as="h3" size="lg" color='AY.600' mb={4}>About Me</Heading>
           <Text fontSize="md" color='AY.600'>
-            Hello! I'm Anson, a 10-year-old with a passion for coding and creating! I 
+            Hello! I'm Anson, a 10-year-old with a passion for coding and creating! I specialise with Scratch, and you can see my projects down below!
           </Text>
         </Box>
 {/* Study how Project Card is used. And do the same thing to add your profile picture above the About me section */}
