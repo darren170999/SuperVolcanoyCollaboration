@@ -13,6 +13,9 @@ import SkyIsland from "./SkyIsland.png";
 import TheBackrooms from "./TheBackrooms.png";
 import Level from "./Level.png";
 import AnsonYu from "./AnsonYu.png";
+import LunarBase from "./LunarBase.png";
+import TrappedInSpace from "./TrappedInSpace";
+import PlaneCrashSimulator from "./PlaneCrashSimulator.png";
 const theme = extendTheme({
   fonts: {
     heading: 'Comic Sans MS, sans-serif',
@@ -57,7 +60,6 @@ function App() {
             Hello! I'm Anson, a 10-year-old with a passion for coding and creating! I specialise with Scratch, and you can see my projects down below!
           </Text>
         </Box>
-{/* Study how Project Card is used. And do the same thing to add your profile picture above the About me section */}
         <Box maxW="800px" mx="auto" py={8} px={6}>
           <Heading as="h3" size="lg" mb={4} textAlign="center" color='AY.600'>
             My Projects
@@ -80,6 +82,24 @@ function App() {
               description="A 3d game that is set in the Backrooms!"
               imgSrc={TheBackrooms}
               srcLink="https://scratch.mit.edu/projects/1051251493/"
+            />
+            <ProjectCard
+              title="Lost in Space"
+              description="A shooter game which has cheat codes and guns of all kinds!"
+              imgSrc={TrappedInSpace}
+              srcLink="https://edu.cospaces.io/Studio/Space/xABo7HV1YmkaKSmc"
+            />
+            <ProjectCard
+              title="Lunar Base"
+              description="A game based on Level ! of the Backrooms (Warning: jumpscare)."
+              imgSrc={LunarBase}
+              srcLink="https://edu.cospaces.io/Studio/Space/vz2yIBpFSXmbMoCE"
+            />
+            <ProjectCard
+              title="Plane Crash Simulator"
+              description="A 3d game that is set in the Backrooms!"
+              imgSrc={PlaneCrashSimulator}
+              srcLink="https://edu.cospaces.io/Studio/Space/UNRFdj54vkyd5LVh"
             />
           </SimpleGrid>
         </Box>
