@@ -14,8 +14,8 @@ import TheBackrooms from "./TheBackrooms.png";
 import Level from "./Level.png";
 import AnsonYu from "./AnsonYu.png";
 import LunarBase from "./LunarBase.png";
-import TrappedInSpace from "./TrappedInSpace";
-import PlaneCrashSimulator from "./PlaneCrashSimulator.png";
+import TrappedInSpace from "./TrappedInSpace.png";
+import PlaneCrashSimulator2 from "./PlaneCrashSimulator2.png";
 const theme = extendTheme({
   fonts: {
     heading: 'Comic Sans MS, sans-serif',
@@ -85,20 +85,20 @@ function App() {
             />
             <ProjectCard
               title="Lost in Space"
-              description="A shooter game which has cheat codes and guns of all kinds!"
+              description="A parkour game with challenges like tightrope walking!!"
               imgSrc={TrappedInSpace}
               srcLink="https://edu.cospaces.io/Studio/Space/xABo7HV1YmkaKSmc"
             />
             <ProjectCard
               title="Lunar Base"
-              description="A game based on Level ! of the Backrooms (Warning: jumpscare)."
+              description="A lunar base we can explore!"
               imgSrc={LunarBase}
               srcLink="https://edu.cospaces.io/Studio/Space/vz2yIBpFSXmbMoCE"
             />
             <ProjectCard
               title="Plane Crash Simulator"
-              description="A 3d game that is set in the Backrooms!"
-              imgSrc={PlaneCrashSimulator}
+              description="Survive the plane crash!"
+              imgSrc={PlaneCrashSimulator2}
               srcLink="https://edu.cospaces.io/Studio/Space/UNRFdj54vkyd5LVh"
             />
           </SimpleGrid>
